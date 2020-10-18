@@ -15,7 +15,7 @@ namespace dotNet5781_9209_6071
             Console.ReadKey();
         }
 
-        private static void Welcome6071() { }
+        static partial void Welcome6071();
 
         private static void Welcome9209()
         {
