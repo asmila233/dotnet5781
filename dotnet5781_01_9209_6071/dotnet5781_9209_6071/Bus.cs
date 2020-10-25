@@ -8,5 +8,7 @@ namespace dotnet5781_9209_6071
 {
     class Bus
     {
+        private:
+            string lisence_plate;
     }
 }
