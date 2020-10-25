@@ -28,10 +28,8 @@ namespace dotnet5781_9209_6071
             service_date = date_in;
         }
         public Bus()
-        {
-            license_plate = 0;
-
-        }
+        { }
+        
         public DateTime date_get()
         {
             return service_date;
@@ -53,7 +51,6 @@ namespace dotnet5781_9209_6071
         {
             fuel = 1200;
         }
-
         public bool enough_fuel(int distance)
         {
             if (distance < fuel)
