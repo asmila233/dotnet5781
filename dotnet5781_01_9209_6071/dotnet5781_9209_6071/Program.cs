@@ -40,11 +40,10 @@ namespace dotNet5781_9209_6071
                         Console.WriteLine("Enter the license number");
                         help_license = int.Parse(Console.ReadLine());
                         Random r = new Random(DateTime.Now.Millisecond);
-                        r.Next(2147483647);
-                        int r1 = int.Parse(r);
+                        int r1 = r.Next(1,1200);
                         if (bus_list.ContainsValue(bus123))
                             Console.WriteLine("The bus does not exist in the system");
-                        else if(r > 20000 || )
+                        else if(r1 > 20000 || )
                             Console.WriteLine("the car wont able to drive");
                         break;
 
