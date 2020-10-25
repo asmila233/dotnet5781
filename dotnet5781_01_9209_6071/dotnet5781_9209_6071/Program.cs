@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotnet5781_9209_6071
+namespace dotNet5781_9209_6071
 {
     enum State { Add = 1, Choose = 2, GAS = 3, KM = 4, exit =5 };
     class Program
