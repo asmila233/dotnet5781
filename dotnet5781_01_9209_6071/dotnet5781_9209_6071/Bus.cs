@@ -38,7 +38,7 @@ namespace dotnet5781_9209_6071
         }
         public void date_set(DateTime date)
         {
-             service_date = date;
+            service_date = date;
         }
         public int license_get()
         {
@@ -66,10 +66,10 @@ namespace dotnet5781_9209_6071
             bool distance = ((km_since_service + travel_distance) < 20000);
 
             TimeSpan remainder = (date - service_date);
-            TimeSpan FullYear = new TimeSpan ( 365, 0, 0, 0, 0 );
+            TimeSpan FullYear = new TimeSpan(365, 0, 0, 0, 0);
 
             bool time = (FullYear > remainder);
-            
+
             if (distance && time)
             {
                 Console.WriteLine("Your bus is ready to go");
