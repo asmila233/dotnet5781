@@ -36,7 +36,7 @@ namespace dotNet5781_9209_6071
         }
         public void date_set(DateTime date)
         {
-            service_date = date;
+            service_date = date; 
         }
         public int license_get()
         {
