@@ -1,8 +1,8 @@
 C:\Users\User\Desktop\the_answer\dotNet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.csprojAssemblyReference.cache
+C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\bin\Debug\dotNet5781_9209_6071.exe.config
 C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\bin\Debug\dotNet5781_9209_6071.exe
 C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\bin\Debug\dotNet5781_9209_6071.pdb
-C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.csprojAssemblyReference.cache
-C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.exe
 C:\Users\lenovo\Source\Repos\asmila233\dotnet5781\dotnet5781_01_9209_6071\dotNet5781_9209_6071\obj\Debug\dotNet5781_9209_6071.pdb

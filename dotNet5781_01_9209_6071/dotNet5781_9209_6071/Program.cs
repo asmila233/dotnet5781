@@ -13,7 +13,7 @@ namespace dotNet5781_9209_6071
         static void Main(string[] args)
         {
             Dictionary<int, Bus> bus_list = new Dictionary<int, Bus>();
-            State the_choose;
+            string the_choose;
             bool flag1 = true;
             while (flag1)
             {
@@ -23,25 +23,26 @@ namespace dotNet5781_9209_6071
                 Console.WriteLine("Do refueling or handling of a bus - 3");
                 Console.WriteLine("Viewing the passenger since the last treatment for all the car in the company - 4");
                 Console.WriteLine("EXIT - 5");
-
-                the_choose = (State)Console.Read();
-                int help_license, help;
+                the_choose = Console.ReadLine();
+                 //the_choose = (State)Console.Read()-48;
+                 int help;
                 DateTime dt = new DateTime();
                 Bus bus123 = new Bus();
                 Random r = new Random(DateTime.Now.Millisecond);
                 dt = DateTime.Today;
-
-                switch (the_choose)
+                
+                switch (Int32.Parse(the_choose))
                 {
-                    case State.Add:
+                    case 1:
                         Console.WriteLine("Enter the license number, and the start date of the activity");
-                        help_license = int.Parse(Console.ReadLine());
+                        string plate = Console.ReadLine();
+                        int help_license = int.Parse(plate);
                         Console.WriteLine(dt);
-                        bus_list[help_license].date_set(dt);
+                        `bus_list[help_license].date_set(dt);
                         bus_list.Add(help_license, bus123);
                         break;
 
-                    case State.Choose:
+                    case 2:
                         Console.WriteLine("Enter the license number");
                         help_license = int.Parse(Console.ReadLine());
                         int r1 = r.Next(1, 1200);
@@ -57,7 +58,7 @@ namespace dotNet5781_9209_6071
                         }
                         break;
 
-                    case State.GAS:
+                    case 3:
                         Console.WriteLine("Enter the license number");
                         help_license = int.Parse(Console.ReadLine());
                         Console.WriteLine("Choose between treatment and repair: for treatment choose 1 and for repair 2");
@@ -78,12 +79,12 @@ namespace dotNet5781_9209_6071
                                 Console.WriteLine("Error");
                         break;
 
-                    case State.KM:
+                    case 4:
                         foreach (var kvp in bus_list)
                             Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value.km_get());
                         break;
 
-                    case State.exit:
+                    case 5:
                         flag1 = false;
                         break;
                     default:
