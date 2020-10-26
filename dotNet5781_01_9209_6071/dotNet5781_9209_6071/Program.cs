@@ -75,11 +75,12 @@ namespace dotNet5781_9209_6071
                                 }
                             }
                             else
-                                Console.WriteLine("Erorr");
+                                Console.WriteLine("Error");
                         break;
 
                     case State.KM:
-
+                        foreach (var kvp in bus_list)
+                            Console.WriteLine("Key: {0}, Value: {1}", kvp.Key, kvp.Value.km_get());
                         break;
 
                     case State.exit:
