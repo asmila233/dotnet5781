@@ -19,6 +19,7 @@ namespace dotNet5781_9209_6071
         private int km_since_service;
         private DateTime service_date;
         private int fuel;
+        //constructor
         public Bus(int plate_input, DateTime date_in)
         {
             license_plate = plate_input;
@@ -29,6 +30,7 @@ namespace dotNet5781_9209_6071
         }
         public Bus()
         { }
+        // setters and getters
         public int km_get()
         {
             return kilometrage;
@@ -54,20 +56,23 @@ namespace dotNet5781_9209_6071
         {
             return fuel;
         }
+        public int km_since_servic_get()
+        {
+            return km_since_service;
+        }
+        // updates every field in the class after travelling
         public void travel_update(int distance_traveled)
         {
             km_since_service += distance_traveled;
             kilometrage += distance_traveled;
             fuel -= distance_traveled;
         }
-        public int km_since_servic_get()
-        {
-            return km_since_service;
-        }
+        //updates the fuel levels after refuel
         public void refuel()
         {
             fuel = 1200;
         }
+        // checks if there is enough fuel to perform the trip
         public bool enough_fuel(int distance)
         {
             if (distance < fuel)
@@ -75,6 +80,7 @@ namespace dotNet5781_9209_6071
             else
                 return false;
         }
+        //check if the bus can travel the distance without the need for service
         public bool is_proper(int travel_distance, DateTime date)
         {
             bool distance = ((km_since_service + travel_distance) < 20000);

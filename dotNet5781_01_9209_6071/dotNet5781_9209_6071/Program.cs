@@ -38,8 +38,8 @@ namespace dotNet5781_9209_6071
                         string plate = Console.ReadLine();
                         int help_license = int.Parse(plate);
                         Console.WriteLine(dt);
-                        `bus_list[help_license].date_set(dt);
                         bus_list.Add(help_license, bus123);
+                        bus_list[help_license].date_set(dt);
                         break;
 
                     case 2:
