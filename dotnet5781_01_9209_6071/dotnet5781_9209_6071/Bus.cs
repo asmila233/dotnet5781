@@ -42,6 +42,10 @@ namespace dotNet5781_9209_6071
         {
             return license_plate;
         }
+        public int km_get()
+        {
+            return kilometrage;
+        }
         //no need for license plate setter
         public int fuel_get()
         {
