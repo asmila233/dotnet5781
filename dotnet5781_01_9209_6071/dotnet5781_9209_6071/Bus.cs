@@ -38,13 +38,13 @@ namespace dotNet5781_9209_6071
         {
             service_date = date; 
         }
+        public void set_km_si_se(int num)
+        {
+            km_since_service = num;
+        }
         public int license_get()
         {
             return license_plate;
-        }
-        public int km_get()
-        {
-            return kilometrage;
         }
         //no need for license plate setter
         public int fuel_get()
