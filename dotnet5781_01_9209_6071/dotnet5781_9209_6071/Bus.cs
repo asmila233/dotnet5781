@@ -102,6 +102,35 @@ namespace dotNet5781_9209_6071
             }
         }
 
-
+        public int print_digit(int num)
+        {
+            int[] digit_7 = new int[7];
+            int[] digit_8 = new int[8];
+            if (num_of_digit(num) == 7)
+            {
+                for (int i = 10, j = 7; j > 0; i *= 10, j--)
+                    digit_7[j - 1] = (num % i) / (i / 10);
+                Console.Write("{0}{1}-{2}{3}{4}-{5}", digit_7[0], digit_7[1], digit_7[2], digit_7[3], digit_7[4], digit_7[5]);
+                return digit_7[6];
+            }
+            else if (num_of_digit(num) == 8)
+            {
+                for (int i = 10, j = 8; j > 0; i *= 10, j--)
+                    digit_8[j - 1] = (num % i) / (i / 10);
+                Console.Write("{0}{1}{2}-{3}{4}-{5}{6}", digit_8[0], digit_8[1], digit_8[2], digit_8[3], digit_8[4], digit_8[5], digit_8[6]);
+                return digit_8[7];
+            }
+            else
+            {
+                Console.WriteLine("Error");
+                return -1;
+            }
+        }
+        public int num_of_digit(int num)
+        {
+            int sum = 0;
+            for (int i = 10; i <= num * 10; i *= 10, sum++) ;
+            return sum;
+        }
     }
 }
