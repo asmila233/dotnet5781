@@ -13,7 +13,7 @@ namespace dotNet5781_9209_6071
         static void Main(string[] args)
         {
             Dictionary<int, Bus> bus_list = new Dictionary<int, Bus>();
-            string the_choose;
+            int the_choose;
             bool flag1 = true;
             while (flag1)
             {
@@ -23,23 +23,22 @@ namespace dotNet5781_9209_6071
                 Console.WriteLine("Do refueling or handling of a bus - 3");
                 Console.WriteLine("Viewing the passenger since the last treatment for all the car in the company - 4");
                 Console.WriteLine("EXIT - 5");
-                the_choose = Console.ReadLine();
-                 //the_choose = (State)Console.Read()-48;
-                 int help;
+
+                the_choose = int.Parse(Console.ReadLine());
+                int help_license, help;
                 DateTime dt = new DateTime();
                 Bus bus123 = new Bus();
                 Random r = new Random(DateTime.Now.Millisecond);
                 dt = DateTime.Today;
-                
-                switch (Int32.Parse(the_choose))
+
+                switch (the_choose)
                 {
                     case 1:
                         Console.WriteLine("Enter the license number, and the start date of the activity");
-                        string plate = Console.ReadLine();
-                        int help_license = int.Parse(plate);
+                        help_license = int.Parse(Console.ReadLine());
                         Console.WriteLine(dt);
-                        bus_list.Add(help_license, bus123);
                         bus_list[help_license].date_set(dt);
+                        bus_list.Add(help_license, bus123);
                         break;
 
                     case 2:
@@ -99,6 +98,27 @@ namespace dotNet5781_9209_6071
             int sum = 0;
             for (int i = 10; i <= num * 10; i *= 10, sum++) ;
                 return sum;
+        }
+        public void print_digit(int num)
+        {
+            int[] digit_7 = new int[7];
+            int[] digit_8 = new int[8];
+            if (num_of_digit(num) == 7)
+            {
+                for (int i = 10, j = 0; j < 7; i *= 10, j++)
+                    digit_7[j] = (num % i) / (i / 10);
+                Console.WriteLine("{0}, {1} - {2}, {3}, {4} - {5}, {6}", digit_7[0], digit_7[1], digit_7[2], digit_7[3], digit_7[4], digit_7[5], digit_7[6]);
+
+            }
+            else if (num_of_digit(num) == 8)
+            {
+                for (int i = 10, j = 0; j < 8; i *= 10, j++)
+                    digit_8[j] = (num % i) / (i / 10);
+                Console.WriteLine("{0}, {1}, {2} - {3}, {4} - {5}, {6}, {7}", digit_8[0], digit_8[1], digit_8[2], digit_8[3], digit_8[4], digit_8[5], digit_8[6], digit_8[7]);
+            }
+            else
+                Console.WriteLine("Error");
+
         }
     }
 }
