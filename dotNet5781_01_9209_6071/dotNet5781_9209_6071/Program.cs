@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace dotNet5781_9209_6071
 {
-    enum State { Add = 1, Choose = 2, GAS = 3, KM = 4, exit =5 };
+    enum State { Add = 1, Choose = 2, GAS = 3, KM = 4, exit = 5 };
     class Program
     {
         static void Main(string[] args)
@@ -24,7 +24,7 @@ namespace dotNet5781_9209_6071
                 Console.WriteLine("Viewing the passenger since the last treatment for all the car in the company - 4");
                 Console.WriteLine("EXIT - 5");
                 the_choose = (State)Console.Read();
-                int help_license,help;
+                int help_license, help;
                 DateTime a;
                 Bus bus123 = new Bus();
                 switch (the_choose)
@@ -40,15 +40,24 @@ namespace dotNet5781_9209_6071
                         Console.WriteLine("Enter the license number");
                         help_license = int.Parse(Console.ReadLine());
                         Random r = new Random(DateTime.Now.Millisecond);
-                        int r1 = r.Next(1,1200);
+                        int r1 = r.Next(1, 1200);
                         if (bus_list.ContainsValue(bus123))
                             Console.WriteLine("The bus does not exist in the system");
-                        else if(r1 > 20000 || )
+                        else if ()
                             Console.WriteLine("the car wont able to drive");
                         break;
 
                     case State.GAS:
+                        Console.WriteLine("Enter the license number");
+                        help_license = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Choose between treatment and repair: for treatment choose 1 and for repair 2");
+                        help = int.Parse(Console.ReadLine());
+                        if (help == 1)
 
+                            else if (help == 2)
+
+                                else
+                                            Console.WriteLine("Erorr");
                         break;
 
                     case State.KM:
@@ -68,8 +77,8 @@ namespace dotNet5781_9209_6071
         public int num_of_digit(int num)
         {
             int sum = 0;
-            for(int i = 10; i <= num*10; i *= 10, sum++)
-            return sum;
+            for (int i = 10; i <= num * 10; i *= 10, sum++)
+                return sum;
         }
     }
 }
