@@ -47,6 +47,16 @@ namespace dotNet5781_9209_6071
         {
             return fuel;
         }
+        public void travel_update(int distance_traveled)
+        {
+            km_since_service += distance_traveled;
+            kilometrage += distance_traveled;
+            fuel -= distance_traveled;
+        }
+        public int km_since_servic_get()
+        {
+            return km_since_service;
+        }
         public void refuel()
         {
             fuel = 1200;
