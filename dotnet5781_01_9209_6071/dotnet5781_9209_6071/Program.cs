@@ -23,28 +23,38 @@ namespace dotNet5781_9209_6071
                 Console.WriteLine("Do refueling or handling of a bus - 3");
                 Console.WriteLine("Viewing the passenger since the last treatment for all the car in the company - 4");
                 Console.WriteLine("EXIT - 5");
-                the_choose = (State)Console.Read();
+
+                the_choose = int.Parse(Console.ReadLine());
                 int help_license, help;
-                DateTime a;
+                DateTime dt = new DateTime();
                 Bus bus123 = new Bus();
+                Random r = new Random(DateTime.Now.Millisecond);
+                dt = DateTime.Today;
+
                 switch (the_choose)
                 {
                     case State.Add:
                         Console.WriteLine("Enter the license number, and the start date of the activity");
                         help_license = int.Parse(Console.ReadLine());
-
+                        Console.WriteLine(dt);
+                        bus_list[help_license].date_set(dt);
                         bus_list.Add(help_license, bus123);
                         break;
 
                     case State.Choose:
                         Console.WriteLine("Enter the license number");
                         help_license = int.Parse(Console.ReadLine());
-                        Random r = new Random(DateTime.Now.Millisecond);
                         int r1 = r.Next(1, 1200);
-                        if (bus_list.ContainsValue(bus123))
-                            Console.WriteLine("The bus does not exist in the system");
-                        else if ()
+                        if (!bus_list.ContainsKey(help_license))
+                            Console.WriteLine("The bus does not exist in the system not enugh fuel");
+                        else if (!bus_list[help_license].enough_fuel(r1))
                             Console.WriteLine("the car wont able to drive");
+                        else if (!bus_list[help_license].is_proper(r1,dt))
+                            Console.WriteLine("the car wont able to drive it need repair");
+                        else
+                        {
+                            bus_list[help_license].travel_update(r1);
+                        }
                         break;
 
                     case State.GAS:
@@ -53,11 +63,19 @@ namespace dotNet5781_9209_6071
                         Console.WriteLine("Choose between treatment and repair: for treatment choose 1 and for repair 2");
                         help = int.Parse(Console.ReadLine());
                         if (help == 1)
-
+                            if (bus_list.ContainsKey(help_license))
+                                bus_list[help_license].refuel();
                             else if (help == 2)
-
-                                else
-                                            Console.WriteLine("Erorr");
+                            {
+                                 dt = DateTime.Today; // returns today's date
+                                if (bus_list.ContainsKey(help_license))
+                                {
+                                    bus_list[help_license].date_set(dt);
+                                    bus_list[help_license].set_km_si_se(0);
+                                }
+                            }
+                            else
+                                Console.WriteLine("Error");
                         break;
 
                     case State.KM:
@@ -78,7 +96,7 @@ namespace dotNet5781_9209_6071
         public int num_of_digit(int num)
         {
             int sum = 0;
-            for (int i = 10; i <= num * 10; i *= 10, sum++)
+            for (int i = 10; i <= num * 10; i *= 10, sum++) ;
                 return sum;
         }
     }

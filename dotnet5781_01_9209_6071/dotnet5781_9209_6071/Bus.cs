@@ -29,7 +29,10 @@ namespace dotNet5781_9209_6071
         }
         public Bus()
         { }
-        
+        public int km_get()
+        {
+            return kilometrage;
+        }
         public DateTime date_get()
         {
             return service_date;
