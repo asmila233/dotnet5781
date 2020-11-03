@@ -41,7 +41,7 @@ namespace dotNet5781_9209_6071
         }
         public void date_set(DateTime date)
         {
-            service_date = date; 
+            service_date = date;
         }
         public void set_km_si_se(int num)
         {
@@ -101,7 +101,7 @@ namespace dotNet5781_9209_6071
                 return false;
             }
         }
-
+        //Prints the digits of the license number according to the instructions
         public int print_digit(int num)
         {
             int[] digit_7 = new int[7];
@@ -126,6 +126,7 @@ namespace dotNet5781_9209_6071
                 return -1;
             }
         }
+        //A function that counts the number of license digits
         public int num_of_digit(int num)
         {
             int sum = 0;

@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dotNet_5781_6071_9209
+namespace dotNet5781_9209_6071
 {
-    class Program
+    class Bus_Station
     {
-        static void Main(string[] args)
-        {
-        }
+
     }
 }
